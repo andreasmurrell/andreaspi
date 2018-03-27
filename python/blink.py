@@ -3,6 +3,10 @@ import time
 
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(4, GPIO.OUT)
-GPIO.output(4, GPIO.LOW)
-time.sleep(.01)
-GPIO.output(4, GPIO.HIGH)
+
+while True:
+  GPIO.output(4, GPIO.LOW)
+  time.sleep(.05)
+  GPIO.output(4, GPIO.HIGH)
+  time.sleep(.05)
+
